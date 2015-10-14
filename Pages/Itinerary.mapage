@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201509182326" modelVersion="1.0" ?>
+<page>
+   <id>Itinerary</id>
+   <title>Itinerary</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <id>backbutton1</id>
+      <label/>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="tap">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+      <icon>Resources/back.png</icon>
+   </backbutton>
+   <actionbutton value="true">
+      <id>actionbutton1</id>
+      <icon>Resources/Rocket-Bug_white_31x42.png</icon>
+      <handlers>
+         <event
+               desc="actionbutton1_OnForward"
+               name="forward">
+            <handler>
+               <action
+                     target="about"
+                     type="OPEN_PAGE">
+                  <transition>fade</transition>
+               </action>
+            </handler>
+         </event>
+      </handlers>
+   </actionbutton>
+   <controls>
+      <HorizontalComposite>
+         <id>HorizontalComposite1</id>
+         <controls>
+            <Image>
+               <id>Image1</id>
+               <source>Resources/Car/${CarSelect.response.output.ResultSet1[${SelectedCar}].FILENAME}</source>
+            </Image>
+            <Label>
+               <id>Label1</id>
+               <value>${CarSelect.response.output.ResultSet1[${SelectedCar}].NAME}</value>
+               <marginCustom value="true">
+                  <marginTop>10</marginTop>
+                  <marginLeft>10</marginLeft>
+               </marginCustom>
+            </Label>
+         </controls>
+         <paddingDefault>10</paddingDefault>
+      </HorizontalComposite>
+      <VerticalComposite>
+         <id>VerticalComposite3</id>
+         <controls>
+            <Label>
+               <id>Label4</id>
+               <value>Car details</value>
+               <textColor>16</textColor>
+               <marginCustom value="true">
+                  <marginLeft>5</marginLeft>
+               </marginCustom>
+            </Label>
+            <FormComposite>
+               <id>FormComposite3</id>
+               <controls>
+                  <Selectbox>
+                     <id>SelectboxColors</id>
+                     <formLabel>Color</formLabel>
+                     <selectboxItems>
+                        <selectboxItem>${Colors}</selectboxItem>
+                     </selectboxItems>
+                  </Selectbox>
+               </controls>
+            </FormComposite>
+         </controls>
+         <backgroundColor>24</backgroundColor>
+      </VerticalComposite>
+      <VerticalComposite>
+         <id>VerticalComposite1</id>
+         <controls>
+            <Label>
+               <id>Label2</id>
+               <value>Pickup Details</value>
+               <textColor>16</textColor>
+               <marginCustom value="true">
+                  <marginLeft>5</marginLeft>
+               </marginCustom>
+            </Label>
+            <FormComposite>
+               <id>FormComposite1</id>
+               <controls>
+                  <Selectbox>
+                     <id>SelectboxPickup</id>
+                     <formLabel>Location</formLabel>
+                     <selectboxItems>
+                        <selectboxItem>${RocketLocations.response.result_set.City}</selectboxItem>
+                     </selectboxItems>
+                  </Selectbox>
+                  <DatePicker>
+                     <id>DatePickup</id>
+                     <formLabel>Date</formLabel>
+                     <inputFormat>yyyy-MM-dd</inputFormat>
+                     <outputFormat>yyyy-MM-dd</outputFormat>
+                  </DatePicker>
+               </controls>
+            </FormComposite>
+         </controls>
+         <backgroundColor>24</backgroundColor>
+         <marginCustom value="true">
+            <marginTop>10</marginTop>
+         </marginCustom>
+      </VerticalComposite>
+      <VerticalComposite>
+         <id>VerticalComposite2</id>
+         <controls>
+            <Label>
+               <id>Label3</id>
+               <value>Dropoff Details</value>
+               <textColor>16</textColor>
+               <marginCustom value="true">
+                  <marginLeft>5</marginLeft>
+               </marginCustom>
+            </Label>
+            <FormComposite>
+               <id>FormComposite2</id>
+               <controls>
+                  <Selectbox>
+                     <id>SelectboxDropoff</id>
+                     <formLabel>Location</formLabel>
+                     <selectboxItems>
+                        <selectboxItem>${RocketLocations.response.result_set.City}</selectboxItem>
+                     </selectboxItems>
+                  </Selectbox>
+                  <DatePicker>
+                     <id>DateDropoff</id>
+                     <formLabel>Date</formLabel>
+                     <inputFormat>yyyy-MM-dd</inputFormat>
+                     <outputFormat>yyyy-MM-dd</outputFormat>
+                  </DatePicker>
+               </controls>
+            </FormComposite>
+         </controls>
+         <backgroundColor>24</backgroundColor>
+         <marginCustom value="true">
+            <marginTop>10</marginTop>
+         </marginCustom>
+      </VerticalComposite>
+      <Label>
+         <id>Message_Label</id>
+         <title/>
+         <value>Retrieving data...</value>
+      </Label>
+      <Button>
+         <id>ButtonBookNow</id>
+         <label
+               class="mainmenu-2"
+               font="RocketFont">Book Now</label>
+         <marginCustom value="true">
+            <marginTop>20</marginTop>
+         </marginCustom>
+         <handlers>
+            <event
+                  desc="ButtonBookNow_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="MAIN"
+                        type="OPEN_PAGE">
+                     <transition>fade</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+   </controls>
+   <handlers>
+      <event
+            desc="Itinerary_OnLoad"
+            name="load">
+         <handler>
+            <condition type="and">
+               <rule operation="eq">
+                  <operand>&quot;${LoadServiceFlag}&quot;</operand>
+                  <operand>false</operand>
+               </rule>
+            </condition>
+            <action
+                  target="RocketLocations"
+                  type="SERVICE_CALL"/>
+            <action
+                  target="LoadServiceFlag"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="true"/>
+            </action>
+            <action
+                  target="officeLocations"
+                  target-type="Array"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="${RocketLocations.response.result_set}"/>
+            </action>
+            <action
+                  target="Scripts/sortLocations.js"
+                  type="CUSTOM_SCRIPT"/>
+            <action
+                  target="Message_Label"
+                  type="WIDGET_HIDE"/>
+         </handler>
+         <handler>
+            <condition type="and">
+               <rule operation="eq">
+                  <operand>&quot;${LoadServiceFlag}&quot;</operand>
+                  <operand>true</operand>
+               </rule>
+            </condition>
+            <action
+                  target="Message_Label"
+                  type="WIDGET_HIDE"/>
+         </handler>
+      </event>
+   </handlers>
+</page>

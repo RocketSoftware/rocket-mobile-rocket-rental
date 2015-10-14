@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" exeVersion="1.0.0.201505011008" modelVersion="1.0" ?>
+<page>
+   <id>LOCATIONS</id>
+   <title>Rental Locations</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <label/>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="tap">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+      <icon>Resources/back.png</icon>
+   </backbutton>
+   <actionbutton value="true">
+      <id>actionbutton1</id>
+      <icon>Resources/Rocket-Bug_white_31x42.png</icon>
+      <handlers>
+         <event
+               desc="actionbutton1_OnForward"
+               name="forward">
+            <handler>
+               <action
+                     target="Drawer1"
+                     type="WIDGET_SHOW"/>
+            </handler>
+         </event>
+      </handlers>
+   </actionbutton>
+   <controls>
+      <VerticalComposite>
+         <id>VerticalComposite2</id>
+         <title/>
+         <controls>
+            <Image>
+               <id>Image1</id>
+               <source>Resources\Car\banner.png</source>
+            </Image>
+         </controls>
+         <alignX>Center</alignX>
+      </VerticalComposite>
+      <Label>
+         <id>Message_Label</id>
+         <title/>
+         <value>Retrieving data...</value>
+      </Label>
+      <List>
+         <id>List1</id>
+         <title/>
+         <listItems>
+            <listItem>
+               <title>${officeLocations.display}</title>
+               <subtitle>${officeLocations.Address1}</subtitle>
+            </listItem>
+         </listItems>
+         <handlers>
+            <event
+                  desc="List1_OnItemSelected"
+                  name="itemSelected">
+               <handler>
+                  <action
+                        target="SelectedOffice"
+                        target-type="Structure"
+                        type="SET_VARIABLE_VALUE">
+                     <actionValue>
+                        <mapping field="Address1">${officeLocations[${List1.selectedIndex}].Address1}</mapping>
+                        <mapping field="City">${officeLocations[${List1.selectedIndex}].City}</mapping>
+                        <mapping field="Lat">${officeLocations[${List1.selectedIndex}].Lat}</mapping>
+                        <mapping field="Lon">${officeLocations[${List1.selectedIndex}].Lon}</mapping>
+                        <mapping field="Name">${officeLocations[${List1.selectedIndex}].Name}</mapping>
+                     </actionValue>
+                  </action>
+                  <action
+                        target="MAP"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+         <marginCustom value="true">
+            <marginTop>10</marginTop>
+         </marginCustom>
+      </List>
+   </controls>
+   <handlers>
+      <event
+            desc="LOCATIONS_OnLoad"
+            name="load">
+         <handler>
+            <condition type="and">
+               <rule operation="eq">
+                  <operand>&quot;${LoadServiceFlag}&quot;</operand>
+                  <operand>false</operand>
+               </rule>
+            </condition>
+            <action
+                  target="Scripts/enableGeolocation.js"
+                  type="CUSTOM_SCRIPT"/>
+            <action
+                  target="Message_Label"
+                  type="WIDGET_SHOW"/>
+            <action
+                  target="List1"
+                  type="WIDGET_HIDE"/>
+            <action
+                  target="RocketLocations"
+                  type="SERVICE_CALL"/>
+            <action
+                  target="LoadServiceFlag"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="true"/>
+            </action>
+            <action
+                  target="Message_Label"
+                  type="WIDGET_HIDE"/>
+            <action
+                  target="officeLocations"
+                  target-type="Array"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="${RocketLocations.response.result_set}"/>
+            </action>
+            <action
+                  target="Scripts/sortLocations.js"
+                  type="CUSTOM_SCRIPT"/>
+            <action
+                  target="List1"
+                  type="WIDGET_SHOW"/>
+         </handler>
+         <handler>
+            <condition type="and">
+               <rule operation="eq">
+                  <operand>&quot;${LoadServiceFlag}&quot;</operand>
+                  <operand>true</operand>
+               </rule>
+            </condition>
+            <action
+                  target="Message_Label"
+                  type="WIDGET_HIDE"/>
+         </handler>
+      </event>
+      <event
+            desc="LOCATIONS_OnPull"
+            name="pulltorefresh">
+         <handler>
+            <action
+                  target="RocketLocations"
+                  type="SERVICE_CALL"/>
+            <action
+                  target="LoadServiceFlag"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="true"/>
+            </action>
+            <action
+                  target="officeLocations"
+                  target-type="Array"
+                  type="SET_VARIABLE_VALUE">
+               <actionValue value="${RocketLocations.response.result_set}"/>
+            </action>
+            <action
+                  target="Scripts/sortLocations.js"
+                  type="CUSTOM_SCRIPT"/>
+         </handler>
+      </event>
+   </handlers>
+</page>

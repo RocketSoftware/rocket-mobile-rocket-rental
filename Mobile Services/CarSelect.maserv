@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" exeVersion="1.0.0.201505011008" modelVersion="1.0" ?>
+<service
+      persistent="true"
+      useProxy="true">
+   <uri>http://lsdemo.rocketsoftware.com:9005/com/rocket/carrental/getCars</uri>
+   <query>COUNTRY=UK&amp;SIZE=${cartype}</query>
+   <method>GET</method>
+   <timeout>5000</timeout>
+   <username/>
+   <password/>
+   <request>
+      <type>
+         <structure/>
+      </type>
+   </request>
+   <requestText/>
+   <response>
+      <type>
+         <structure>
+            <member name="name"/>
+            <member name="output">
+               <type>
+                  <structure>
+                     <member name="ResultSet1">
+                        <type>
+                           <array>
+                              <type>
+                                 <structure>
+                                    <member name="COUNTRY"/>
+                                    <member name="DAILYCOST"/>
+                                    <member name="ENGINE"/>
+                                    <member name="FILENAME"/>
+                                    <member name="FUEL"/>
+                                    <member name="GEARBOX"/>
+                                    <member name="NAME"/>
+                                    <member name="SEQUENCE"/>
+                                    <member name="SIZE"/>
+                                 </structure>
+                              </type>
+                           </array>
+                        </type>
+                     </member>
+                  </structure>
+               </type>
+            </member>
+            <member name="requestId"/>
+            <member name="status">
+               <type>
+                  <structure>
+                     <member name="returnCode"/>
+                     <member name="success"/>
+                  </structure>
+               </type>
+            </member>
+            <member name="type"/>
+         </structure>
+      </type>
+   </response>
+   <responseText>{ &quot;status&quot;: { &quot;returnCode&quot;: 0, &quot;success&quot;: true }, &quot;requestId&quot;: &quot;{0a1bf8c5-e2ff1ae10000014b11091f8780c8}&quot;, &quot;name&quot;: &quot;com.rocket.carrental.getCars&quot;, &quot;output&quot;: { &quot;ResultSet1&quot;: [ { &quot;DAILYCOST&quot;: &quot;35.00 &quot;, &quot;SEQUENCE&quot;: &quot;10&quot;, &quot;NAME&quot;: &quot;CITROEN C4 &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;DIESEL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;citroenc4.png &quot;, &quot;ENGINE&quot;: &quot;1.6 &quot;, &quot;SIZE&quot;: &quot;M&quot; }, { &quot;DAILYCOST&quot;: &quot;30.00 &quot;, &quot;SEQUENCE&quot;: &quot;30&quot;, &quot;NAME&quot;: &quot;HYUNDAI I30 &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;DIESEL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;hyundaii30.png &quot;, &quot;ENGINE&quot;: &quot;1.6 &quot;, &quot;SIZE&quot;: &quot;M&quot; }, { &quot;DAILYCOST&quot;: &quot;32.50 &quot;, &quot;SEQUENCE&quot;: &quot;40&quot;, &quot;NAME&quot;: &quot;SKODA OCTAVIA &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;DIESEL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;skodaoctavia.png &quot;, &quot;ENGINE&quot;: &quot;1.8 &quot;, &quot;SIZE&quot;: &quot;M&quot; }, { &quot;DAILYCOST&quot;: &quot;27.50 &quot;, &quot;SEQUENCE&quot;: &quot;50&quot;, &quot;NAME&quot;: &quot;VAUXHALL ASTRA &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;PETROL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;vauxhallastra.png &quot;, &quot;ENGINE&quot;: &quot;1.4 &quot;, &quot;SIZE&quot;: &quot;M&quot; }, { &quot;DAILYCOST&quot;: &quot;29.50 &quot;, &quot;SEQUENCE&quot;: &quot;60&quot;, &quot;NAME&quot;: &quot;VW GOLF &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;PETROL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;vwgolf.png &quot;, &quot;ENGINE&quot;: &quot;1.6 &quot;, &quot;SIZE&quot;: &quot;M&quot; }, { &quot;DAILYCOST&quot;: &quot;30.00 &quot;, &quot;SEQUENCE&quot;: &quot;70&quot;, &quot;NAME&quot;: &quot;VW PASSAT &quot;, &quot;COUNTRY&quot;: &quot;UK &quot;, &quot;FUEL&quot;: &quot;DIESEL &quot;, &quot;GEARBOX&quot;: &quot;MANUAL &quot;, &quot;FILENAME&quot;: &quot;vwpassat.png &quot;, &quot;ENGINE&quot;: &quot;1.6 &quot;, &quot;SIZE&quot;: &quot;M&quot; } ] }, &quot;type&quot;: &quot;BasicResponse&quot; }</responseText>
+   <http-headers>
+      <header
+            name="Content-Type"
+            value="application/json"/>
+      <header
+            name="Accept"
+            value="application/json"/>
+   </http-headers>
+</service>

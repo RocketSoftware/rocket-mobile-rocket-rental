@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" exeVersion="1.0.0.201501291219" modelVersion="1.0" ?>
+<page>
+   <id>statistics</id>
+   <title>Statistics</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <icon>Resources/back.png</icon>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+   </backbutton>
+   <controls>
+      <Carousel>
+         <id>Carousel1</id>
+         <controls>
+            <VerticalComposite>
+               <id>CPage1</id>
+               <controls>
+                  <VerticalComposite>
+                     <id>VerticalComposite1</id>
+                     <controls>
+                        <Label>
+                           <id>Label1</id>
+                           <value font="RocketFont">Car popularity</value>
+                        </Label>
+                     </controls>
+                     <alignX>Center</alignX>
+                     <marginCustom value="true">
+                        <marginBottom>30</marginBottom>
+                        <marginTop>30</marginTop>
+                     </marginCustom>
+                  </VerticalComposite>
+                  <DoughnutChart>
+                     <id>DoughnutChart1</id>
+                     <height>51</height>
+                     <percentageInnerCutout>40</percentageInnerCutout>
+                     <width>99</width>
+                     <data>${PieChartData}</data>
+                  </DoughnutChart>
+               </controls>
+            </VerticalComposite>
+            <VerticalComposite>
+               <id>CPage2</id>
+               <controls>
+                  <VerticalComposite>
+                     <id>VerticalComposite2</id>
+                     <controls>
+                        <Label>
+                           <id>Label2</id>
+                           <value>Milage</value>
+                        </Label>
+                     </controls>
+                     <alignX>Center</alignX>
+                     <marginCustom value="true">
+                        <marginTop>30</marginTop>
+                        <marginBottom>30</marginBottom>
+                     </marginCustom>
+                  </VerticalComposite>
+                  <BarChart>
+                     <id>BarChart1</id>
+                     <data>${BarChartData}</data>
+                     <height>51</height>
+                     <width>99</width>
+                  </BarChart>
+               </controls>
+            </VerticalComposite>
+         </controls>
+         <flex>1</flex>
+         <handlers/>
+      </Carousel>
+   </controls>
+</page>

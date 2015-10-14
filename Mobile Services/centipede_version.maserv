@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" exeVersion="1.0.0.201503110919" modelVersion="1.0" ?>
+<service
+      persistent="true"
+      useProxy="true">
+   <uri>https://rsmob.rocketsoftware.com/centipede/server/v1/info</uri>
+   <query/>
+   <method>GET</method>
+   <timeout>5000</timeout>
+   <username/>
+   <password/>
+   <requestText/>
+   <response>
+      <type>
+         <structure>
+            <member name="serverVersion">
+               <type>
+                  <structure>
+                     <member name="buildNumber"/>
+                     <member name="revision"/>
+                     <member name="timestamp"/>
+                     <member name="version"/>
+                  </structure>
+               </type>
+            </member>
+         </structure>
+      </type>
+   </response>
+   <responseText>{ &quot;serverVersion&quot;: { &quot;timestamp&quot;: &quot;2014-11-25 09:52&quot;, &quot;revision&quot;: &quot;342&quot;, &quot;buildNumber&quot;: &quot;295&quot;, &quot;version&quot;: &quot;0.0.1-SNAPSHOT&quot; } }</responseText>
+   <http-headers>
+      <header
+            name="Content-Type"
+            value="application/json"/>
+      <header
+            name="Accept"
+            value="application/json"/>
+   </http-headers>
+</service>

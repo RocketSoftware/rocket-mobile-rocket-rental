@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201510141332" modelVersion="1.0" ?>
+<page>
+   <id>MAP</id>
+   <title>${SelectedOffice.City}</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <label/>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="tap">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+      <icon>Resources/back.png</icon>
+   </backbutton>
+   <actionbutton value="true">
+      <id>actionbutton1</id>
+      <icon>Resources/Rocket-Bug_white_31x42.png</icon>
+      <handlers>
+         <event
+               desc="actionbutton1_OnForward"
+               name="forward">
+            <handler>
+               <action
+                     target="Drawer1"
+                     type="WIDGET_SHOW"/>
+            </handler>
+         </event>
+      </handlers>
+   </actionbutton>
+   <controls>
+      <Label>
+         <id>Label1</id>
+         <title/>
+         <value>&lt;b&gt;Address:&lt;/b&gt; ${SelectedOffice.Address1}</value>
+         <marginCustom value="true">
+            <marginBottom>8</marginBottom>
+         </marginCustom>
+         <wrap>true</wrap>
+      </Label>
+      <Map>
+         <id>OfficeLoaction_Map</id>
+         <title/>
+         <width>100</width>
+         <height>90</height>
+         <points>
+            <point
+                  lat="${SelectedOffice.Lat}"
+                  lon="${SelectedOffice.Lon}"/>
+         </points>
+      </Map>
+   </controls>
+   <handlers/>
+</page>

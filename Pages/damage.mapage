@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201510030838" modelVersion="1.0" ?>
+<page>
+   <id>damage</id>
+   <title>Report Damage</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <icon>Resources/back.png</icon>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+   </backbutton>
+   <controls>
+      <VerticalComposite>
+         <id>VerticalComposite1</id>
+         <controls>
+            <Label>
+               <id>Label1</id>
+               <value>Damage details</value>
+               <textColor>16</textColor>
+            </Label>
+            <FormComposite>
+               <id>FormComposite1</id>
+               <controls>
+                  <TextField>
+                     <id>TextFieldMileage</id>
+                     <formLabel>Current mileage</formLabel>
+                     <placeholder/>
+                     <inputType>number</inputType>
+                     <value>${damagereport.Milage}</value>
+                  </TextField>
+                  <TextField>
+                     <id>TextFieldDriver</id>
+                     <formLabel>Driver name</formLabel>
+                  </TextField>
+                  <DatePicker>
+                     <id>DateTimeDamage</id>
+                     <inputFormat>yyyy-MM-dd HH:mm</inputFormat>
+                     <outputFormat>yyyy-MM-dd HH:mm</outputFormat>
+                     <formLabel>Date-Time</formLabel>
+                     <hasTime>true</hasTime>
+                  </DatePicker>
+                  <CheckBox>
+                     <id>CheckBoxPoliceReport</id>
+                     <formLabel class="">Police report</formLabel>
+                  </CheckBox>
+                  <CheckBox>
+                     <id>CheckBoxVehicleTowed</id>
+                     <formLabel>Vehicle towed</formLabel>
+                  </CheckBox>
+                  <Button>
+                     <id>ButtonAddPhoto</id>
+                     <label
+                           class="mainmenu-2"
+                           font="RocketFont">Add damage photo</label>
+                     <handlers>
+                        <event
+                              desc="ButtonAddPhoto_OnTap"
+                              name="tap">
+                           <handler>
+                              <action
+                                    target="photo"
+                                    type="OPEN_PAGE">
+                                 <transition>slide</transition>
+                              </action>
+                           </handler>
+                        </event>
+                     </handlers>
+                  </Button>
+               </controls>
+            </FormComposite>
+         </controls>
+         <backgroundColor>24</backgroundColor>
+      </VerticalComposite>
+      <Button>
+         <id>ButtonSubmit</id>
+         <marginCustom value="true">
+            <marginTop>20</marginTop>
+         </marginCustom>
+         <handlers>
+            <event
+                  desc="ButtonSubmit_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="MAIN"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+         <label
+               class="mainmenu-2"
+               font="RocketFont">Submit Damage Report</label>
+      </Button>
+   </controls>
+</page>

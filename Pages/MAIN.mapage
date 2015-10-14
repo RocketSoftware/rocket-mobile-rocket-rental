@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201510030838" modelVersion="1.0" ?>
+<page>
+   <id>MAIN</id>
+   <title>Rocket Rentals</title>
+   <navigationBarHidden>false</navigationBarHidden>
+   <actionbutton value="true">
+      <id>actionbutton1</id>
+      <icon>Resources/Rocket-Bug_white_31x42.png</icon>
+      <handlers>
+         <event
+               desc="actionbutton1_OnForward"
+               name="forward">
+            <handler>
+               <action
+                     target="about"
+                     type="OPEN_PAGE">
+                  <transition>slide</transition>
+               </action>
+            </handler>
+         </event>
+      </handlers>
+   </actionbutton>
+   <controls>
+      <VerticalComposite>
+         <id>VerticalComposite1</id>
+         <controls>
+            <Image>
+               <id>Image1</id>
+               <source>Resources\Car\banner.png</source>
+            </Image>
+         </controls>
+         <alignX>Center</alignX>
+      </VerticalComposite>
+      <Button>
+         <id>ButtonBookaCar</id>
+         <label class="mainmenu-2">Book a Car</label>
+         <marginCustom value="true">
+            <marginTop>10</marginTop>
+         </marginCustom>
+         <handlers>
+            <event
+                  desc="ButtonBookaCar_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="CarSelect"
+                        type="SERVICE_CALL"/>
+                  <action
+                        target="Select"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <Button>
+         <id>ButtonLocate</id>
+         <label class="mainmenu-2">Locate Rental Company</label>
+         <handlers>
+            <event
+                  desc="ButtonLocate_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="LOCATIONS"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <Button>
+         <id>ButtonDamage</id>
+         <label class="mainmenu-2">Report Damage</label>
+         <handlers>
+            <event
+                  desc="ButtonDamage_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="damage"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <Button>
+         <id>ButtonStats</id>
+         <label class="mainmenu-2">Usage Statistics</label>
+         <handlers>
+            <event
+                  desc="ButtonStats_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="statistics"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <HorizontalComposite>
+         <id>HorizontalComposite1</id>
+         <controls>
+            <Image>
+               <id>Image3</id>
+               <source>Resources\about_icon_v2.png</source>
+            </Image>
+            <Label>
+               <id>Label1</id>
+               <value>Powered By Rocket Mobile</value>
+               <marginCustom value="true">
+                  <marginLeft>0</marginLeft>
+                  <marginTop>10</marginTop>
+               </marginCustom>
+            </Label>
+         </controls>
+         <alignY>Middle</alignY>
+         <marginCustom value="true">
+            <marginTop>50</marginTop>
+         </marginCustom>
+         <paddingCustom value="true"/>
+      </HorizontalComposite>
+   </controls>
+   <handlers/>
+</page>

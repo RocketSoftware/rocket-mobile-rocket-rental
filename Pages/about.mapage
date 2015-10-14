@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201509182326" modelVersion="1.0" ?>
+<page>
+   <id>about</id>
+   <title>Rocket Mobile</title>
+   <backgroundImage>Resources/background/background_${DimensionsBackground}.png</backgroundImage>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+      <icon>Resources/back.png</icon>
+   </backbutton>
+   <controls>
+      <HorizontalComposite>
+         <id>HorizontalComposite1</id>
+         <controls>
+            <Image>
+               <id>Image1</id>
+               <source>Resources\about_icon_v2.png</source>
+            </Image>
+            <Label>
+               <id>Label4</id>
+               <value>Powered By Rocket Mobile</value>
+               <marginCustom value="true">
+                  <marginLeft>0</marginLeft>
+                  <marginTop>10</marginTop>
+               </marginCustom>
+            </Label>
+         </controls>
+         <alignY>Middle</alignY>
+         <marginCustom value="true">
+            <marginTop>10</marginTop>
+         </marginCustom>
+         <paddingCustom value="true"/>
+      </HorizontalComposite>
+      <VerticalComposite>
+         <id>VerticalComposite4</id>
+         <controls>
+            <VerticalComposite>
+               <id>VerticalComposite5</id>
+               <controls>
+                  <Label>
+                     <id>Label5</id>
+                     <value>Settings</value>
+                     <textColor>16</textColor>
+                  </Label>
+                  <FormComposite>
+                     <id>FormComposite4</id>
+                     <controls>
+                        <Toggle>
+                           <id>Toggle1</id>
+                           <formLabel><![CDATA[Distance in ]]></formLabel>
+                           <labelChecked>km</labelChecked>
+                           <labelUnchecked>miles</labelUnchecked>
+                           <checked>${distanceInKM}</checked>
+                           <handlers>
+                              <event
+                                    desc="Toggle1_OnChecked"
+                                    name="checked">
+                                 <handler>
+                                    <action
+                                          target="distanceInKM"
+                                          type="SET_VARIABLE_VALUE">
+                                       <actionValue value="true"/>
+                                    </action>
+                                 </handler>
+                              </event>
+                              <event
+                                    desc="Toggle1_OnUnchecked"
+                                    name="unchecked">
+                                 <handler>
+                                    <action
+                                          target="distanceInKM"
+                                          type="SET_VARIABLE_VALUE">
+                                       <actionValue value="false"/>
+                                    </action>
+                                 </handler>
+                              </event>
+                              <event
+                                    desc="Toggle1_OnChange"
+                                    name="change">
+                                 <handler>
+                                    <action
+                                          target="LoadServiceFlag"
+                                          type="SET_VARIABLE_VALUE">
+                                       <actionValue value="false"/>
+                                    </action>
+                                 </handler>
+                              </event>
+                           </handlers>
+                        </Toggle>
+                     </controls>
+                  </FormComposite>
+               </controls>
+               <backgroundColor>24</backgroundColor>
+               <marginCustom value="true">
+                  <marginTop>20</marginTop>
+                  <marginBottom>20</marginBottom>
+               </marginCustom>
+            </VerticalComposite>
+            <VerticalComposite>
+               <id>VerticalComposite2</id>
+               <controls>
+                  <Label>
+                     <id>Label1</id>
+                     <value>About this App</value>
+                     <textColor>16</textColor>
+                  </Label>
+                  <FormComposite>
+                     <id>FormComposite2</id>
+                     <controls>
+                        <TextField>
+                           <id>TextField5</id>
+                           <title/>
+                           <value>${App.ApplicationVersion}</value>
+                           <formLabel>App version</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                     </controls>
+                  </FormComposite>
+               </controls>
+               <backgroundColor>24</backgroundColor>
+               <marginCustom value="true">
+                  <marginTop>20</marginTop>
+                  <marginBottom>20</marginBottom>
+               </marginCustom>
+            </VerticalComposite>
+            <VerticalComposite>
+               <id>VerticalComposite1</id>
+               <controls>
+                  <Label>
+                     <id>Label2</id>
+                     <value>About the Rocket Access &amp; Connectivity Hub</value>
+                     <textColor>16</textColor>
+                  </Label>
+                  <FormComposite>
+                     <id>FormComposite1</id>
+                     <title/>
+                     <controls>
+                        <TextField>
+                           <id>TextField6</id>
+                           <formLabel>URL</formLabel>
+                           <value>${App.SessionInfo.baseUrl}</value>
+                        </TextField>
+                        <TextField>
+                           <id>TextField1</id>
+                           <title/>
+                           <value>${centipede_version.response.serverVersion.version}</value>
+                           <formLabel>Version</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField2</id>
+                           <title/>
+                           <value>${centipede_version.response.serverVersion.timestamp}</value>
+                           <formLabel>Timestamp</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField3</id>
+                           <title/>
+                           <value>${centipede_version.response.serverVersion.revision}</value>
+                           <formLabel>Revision</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField4</id>
+                           <title/>
+                           <value>${centipede_version.response.serverVersion.buildNumber}</value>
+                           <formLabel>Build</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                     </controls>
+                     <marginCustom value="true">
+                        <marginTop>10</marginTop>
+                     </marginCustom>
+                  </FormComposite>
+               </controls>
+               <backgroundColor>24</backgroundColor>
+               <marginCustom value="true">
+                  <marginBottom>20</marginBottom>
+               </marginCustom>
+            </VerticalComposite>
+            <VerticalComposite>
+               <id>VerticalComposite3</id>
+               <controls>
+                  <Label>
+                     <id>Label3</id>
+                     <value>About this device</value>
+                     <textColor>16</textColor>
+                  </Label>
+                  <FormComposite>
+                     <id>FormComposite3</id>
+                     <controls>
+                        <TextField>
+                           <id>TextField7</id>
+                           <title/>
+                           <value>${App.DeviceInfo.width}</value>
+                           <formLabel>Width</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField8</id>
+                           <title/>
+                           <value>${App.DeviceInfo.height}</value>
+                           <formLabel>Height</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField9</id>
+                           <title/>
+                           <value>${App.DeviceInfo.pixelRatio}</value>
+                           <formLabel>Pixel Ratio</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                        <TextField>
+                           <id>TextField10</id>
+                           <title/>
+                           <value>${App.DeviceInfo.orientation}</value>
+                           <formLabel>Orientation</formLabel>
+                           <readOnly>true</readOnly>
+                        </TextField>
+                     </controls>
+                  </FormComposite>
+               </controls>
+               <backgroundColor>24</backgroundColor>
+               <marginCustom value="true">
+                  <marginBottom>20</marginBottom>
+               </marginCustom>
+            </VerticalComposite>
+         </controls>
+      </VerticalComposite>
+      <Button>
+         <id>LogoutButton</id>
+         <label>Logout</label>
+         <handlers>
+            <event
+                  desc="LogoutButton_OnTap"
+                  name="tap">
+               <handler>
+                  <action type="LOGOUT"/>
+               </handler>
+            </event>
+         </handlers>
+         <marginCustom value="true">
+            <marginTop>5</marginTop>
+         </marginCustom>
+         <visible>false</visible>
+      </Button>
+   </controls>
+   <handlers>
+      <event
+            desc="about_OnLoad"
+            name="load">
+         <handler>
+            <action
+                  target="centipede_version"
+                  type="SERVICE_CALL"/>
+            <action
+                  target="Scripts/about.js"
+                  type="CUSTOM_SCRIPT"/>
+         </handler>
+         <handler>
+            <condition type="and">
+               <rule operation="eq">
+                  <operand>&quot;${App.RequireUserCredentials}&quot;</operand>
+                  <operand>true</operand>
+               </rule>
+            </condition>
+            <action
+                  target="LogoutButton"
+                  type="WIDGET_SHOW"/>
+         </handler>
+      </event>
+   </handlers>
+</page>

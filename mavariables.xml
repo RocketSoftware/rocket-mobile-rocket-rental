@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201506110912" modelVersion="1.0" ?>
+<variables>
+   <variable name="SelectedOffice">
+      <type>
+         <structure>
+            <member name="Name"/>
+            <member name="Lat"/>
+            <member name="Lon"/>
+            <member name="Address1"/>
+            <member name="City"/>
+         </structure>
+      </type>
+   </variable>
+   <variable
+         name="Username"
+         persistent="true"/>
+   <variable
+         name="Password"
+         persistent="true"/>
+   <variable name="SelectedCase">
+      <type>
+         <structure>
+            <member name="key"/>
+            <member name="summary"/>
+            <member name="description"/>
+            <member name="statusName"/>
+            <member name="typeName"/>
+            <member name="statusIconUrl"/>
+            <member name="typeIconUrl"/>
+            <member name="priorityName"/>
+            <member name="priorityIconUrl"/>
+         </structure>
+      </type>
+   </variable>
+   <variable name="selectedURL"/>
+   <variable name="officeLocations">
+      <type>
+         <array>
+            <type>
+               <structure>
+                  <member name="Address1"/>
+                  <member name="Address2"/>
+                  <member name="City"/>
+                  <member name="Country"/>
+                  <member name="ID"/>
+                  <member name="Lat"/>
+                  <member name="Lon"/>
+                  <member name="Name"/>
+                  <member name="Notes"/>
+                  <member name="State"/>
+                  <member name="Zip"/>
+                  <member name="display"/>
+               </structure>
+            </type>
+         </array>
+      </type>
+   </variable>
+   <variable name="UseCredentials">
+      <value
+            target="UseCredentials"
+            type="Simple">true</value>
+   </variable>
+   <variable name="SelectedCar"/>
+   <variable name="LoadServiceFlag">
+      <value
+            target="LoadServiceFlag"
+            type="Simple">False</value>
+   </variable>
+   <variable name="PieChartData">
+      <type>
+         <array>
+            <type>
+               <structure>
+                  <member name="value"/>
+                  <member name="color"/>
+                  <member name="highlight"/>
+                  <member name="label"/>
+               </structure>
+            </type>
+         </array>
+      </type>
+      <value
+            target="PieChartData"
+            type="Array">
+         <value type="Structure">
+            <value
+                  target="color"
+                  type="Simple">#F7464A</value>
+            <value
+                  target="value"
+                  type="Simple">${+300}</value>
+            <value
+                  target="label"
+                  type="Simple">VW Golf</value>
+            <value
+                  target="highlight"
+                  type="Simple">#FF5A5E</value>
+         </value>
+         <value type="Structure">
+            <value
+                  target="color"
+                  type="Simple">#46BFBD</value>
+            <value
+                  target="value"
+                  type="Simple">${+50}</value>
+            <value
+                  target="label"
+                  type="Simple">Hyundai i30</value>
+            <value
+                  target="highlight"
+                  type="Simple">#5AD3D1</value>
+         </value>
+         <value type="Structure">
+            <value
+                  target="color"
+                  type="Simple">#FDB45C</value>
+            <value
+                  target="value"
+                  type="Simple">${+100}</value>
+            <value
+                  target="label"
+                  type="Simple">Skoda Octavia</value>
+            <value
+                  target="highlight"
+                  type="Simple">#FCC17A</value>
+         </value>
+         <value type="Structure">
+            <value
+                  target="color"
+                  type="Simple">#949FB1</value>
+            <value
+                  target="value"
+                  type="Simple">${+40}</value>
+            <value
+                  target="label"
+                  type="Simple">Vauxhall Astra</value>
+            <value
+                  target="highlight"
+                  type="Simple">#A8B3C5</value>
+         </value>
+      </value>
+   </variable>
+   <variable name="BarChartData">
+      <type>
+         <structure>
+            <member name="labels">
+               <type>
+                  <array/>
+               </type>
+            </member>
+            <member name="datasets">
+               <type>
+                  <array>
+                     <type>
+                        <structure>
+                           <member name="label"/>
+                           <member name="fillColor"/>
+                           <member name="strokeColor"/>
+                           <member name="highlightFill"/>
+                           <member name="highlightStroke"/>
+                           <member name="data">
+                              <type>
+                                 <array/>
+                              </type>
+                           </member>
+                        </structure>
+                     </type>
+                  </array>
+               </type>
+            </member>
+         </structure>
+      </type>
+      <value
+            target="BarChartData"
+            type="Structure">
+         <value
+               target="datasets"
+               type="Array">
+            <value type="Structure">
+               <value
+                     target="highlightFill"
+                     type="Simple">rgba(220,220,220,0.75)</value>
+               <value
+                     target="fillColor"
+                     type="Simple">rgba(220,220,220,0.5)</value>
+               <value
+                     target="highlightStroke"
+                     type="Simple">rgba(220,220,220,1)</value>
+               <value
+                     target="data"
+                     type="Array">
+                  <value type="Simple">650</value>
+                  <value type="Simple">590</value>
+                  <value type="Simple">800</value>
+                  <value type="Simple">810</value>
+                  <value type="Simple">560</value>
+                  <value type="Simple">550</value>
+                  <value type="Simple">400</value>
+               </value>
+               <value
+                     target="label"
+                     type="Simple">Actual Milage</value>
+               <value
+                     target="strokeColor"
+                     type="Simple">rgba(220,220,220,0.8)</value>
+            </value>
+            <value type="Structure">
+               <value
+                     target="highlightFill"
+                     type="Simple">rgba(151,187,205,0.75)</value>
+               <value
+                     target="fillColor"
+                     type="Simple">rgba(151,187,205,0.5)</value>
+               <value
+                     target="highlightStroke"
+                     type="Simple">rgba(151,187,205,1)</value>
+               <value
+                     target="data"
+                     type="Array">
+                  <value type="Simple">280</value>
+                  <value type="Simple">480</value>
+                  <value type="Simple">400</value>
+                  <value type="Simple">190</value>
+                  <value type="Simple">860</value>
+                  <value type="Simple">270</value>
+                  <value type="Simple">900</value>
+               </value>
+               <value
+                     target="label"
+                     type="Simple">Average Milage</value>
+               <value
+                     target="strokeColor"
+                     type="Simple">rgba(151,187,205,0.8)</value>
+            </value>
+         </value>
+         <value
+               target="labels"
+               type="Array">
+            <value type="Simple">January</value>
+            <value type="Simple">February</value>
+            <value type="Simple">March</value>
+            <value type="Simple">April</value>
+            <value type="Simple">May</value>
+            <value type="Simple">June</value>
+            <value type="Simple">July</value>
+         </value>
+      </value>
+   </variable>
+   <variable name="photovariable"/>
+   <variable name="cartype">
+      <value
+            target="cartype"
+            type="Simple">S</value>
+   </variable>
+   <variable name="Centipede">
+      <type>
+         <structure>
+            <member name="address"/>
+            <member name="name"/>
+         </structure>
+      </type>
+   </variable>
+   <variable name="damagereport">
+      <type>
+         <structure>
+            <member name="Milage"/>
+            <member name="Driver"/>
+            <member name="Policereport"/>
+            <member name="Towed"/>
+            <member name="datetime"/>
+         </structure>
+      </type>
+   </variable>
+   <variable
+         name="Colors"
+         persistent="true"
+         storage="server">
+      <type>
+         <array/>
+      </type>
+      <value
+            target="Colors"
+            type="Array">
+         <value type="Simple">Black</value>
+         <value type="Simple">Blue</value>
+         <value type="Simple">Brown</value>
+         <value type="Simple">Green</value>
+         <value type="Simple">Grey</value>
+         <value type="Simple">Red</value>
+         <value type="Simple">Silver</value>
+         <value type="Simple">White</value>
+      </value>
+   </variable>
+   <variable
+         name="distanceInKM"
+         persistent="true">
+      <value
+            target="distanceInKM"
+            type="Simple">false</value>
+   </variable>
+</variables>

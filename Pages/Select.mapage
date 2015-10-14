@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201509182326" modelVersion="1.0" ?>
+<page>
+   <id>Select</id>
+   <title>Select Model</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <id>backbutton1</id>
+      <label/>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="tap">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+      <icon>Resources/back.png</icon>
+   </backbutton>
+   <actionbutton value="true">
+      <id>actionbutton1</id>
+      <icon>Resources/Rocket-Bug_white_31x42.png</icon>
+      <handlers/>
+   </actionbutton>
+   <controls>
+      <TabBar>
+         <id>TabBar1</id>
+         <position>Top</position>
+         <controls>
+            <Button>
+               <id>ButtonCompact</id>
+               <label>Compact</label>
+               <handlers>
+                  <event
+                        desc="ButtonCompact_OnTap"
+                        name="tap">
+                     <handler>
+                        <action
+                              target="cartype"
+                              type="SET_VARIABLE_VALUE">
+                           <actionValue value="S"/>
+                        </action>
+                        <action
+                              target="CarSelect"
+                              type="SERVICE_CALL"/>
+                     </handler>
+                  </event>
+               </handlers>
+            </Button>
+            <Button>
+               <id>ButtonMidsize</id>
+               <label>Midsize</label>
+               <handlers>
+                  <event
+                        desc="ButtonMidsize_OnTap"
+                        name="tap">
+                     <handler>
+                        <action
+                              target="cartype"
+                              type="SET_VARIABLE_VALUE">
+                           <actionValue value="M"/>
+                        </action>
+                        <action
+                              target="CarSelect"
+                              type="SERVICE_CALL"/>
+                     </handler>
+                  </event>
+               </handlers>
+            </Button>
+            <Button>
+               <id>ButtonEstate</id>
+               <label>Estate</label>
+               <handlers>
+                  <event
+                        desc="ButtonEstate_OnTap"
+                        name="tap">
+                     <handler>
+                        <action
+                              target="cartype"
+                              type="SET_VARIABLE_VALUE">
+                           <actionValue value="L"/>
+                        </action>
+                        <action
+                              target="CarSelect"
+                              type="SERVICE_CALL"/>
+                     </handler>
+                  </event>
+               </handlers>
+            </Button>
+         </controls>
+      </TabBar>
+      <List>
+         <id>List1</id>
+         <listItems>
+            <listItem>
+               <title>${CarSelect.response.output.ResultSet1.NAME}</title>
+               <subtitle>${CarSelect.response.output.ResultSet1.DAILYCOST}</subtitle>
+               <icon>Resources/Car/${CarSelect.response.output.ResultSet1.FILENAME}</icon>
+            </listItem>
+         </listItems>
+         <handlers>
+            <event
+                  desc="List1_OnItemSelected"
+                  name="itemSelected">
+               <handler>
+                  <action
+                        target="SelectedCar"
+                        type="SET_VARIABLE_VALUE">
+                     <actionValue value="${List1.selectedIndex}"/>
+                  </action>
+                  <action
+                        target="Itinerary"
+                        type="OPEN_PAGE">
+                     <transition>slide</transition>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </List>
+   </controls>
+   <handlers/>
+</page>

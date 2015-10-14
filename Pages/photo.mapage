@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201509182326" modelVersion="1.0" ?>
+<page>
+   <id>photo</id>
+   <title>Damage Photo</title>
+   <backbutton value="true">
+      <id>backbutton1</id>
+      <icon>Resources/back.png</icon>
+      <handlers>
+         <event
+               desc="backbutton1_OnBack"
+               name="back">
+            <handler>
+               <action type="BACK"/>
+            </handler>
+         </event>
+      </handlers>
+   </backbutton>
+   <controls>
+      <Button>
+         <id>ButtonTakePhoto</id>
+         <label class="mainmenu-2">Take photo</label>
+         <handlers>
+            <event
+                  desc="ButtonTakePhoto_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="photovariable"
+                        type="TAKE_PHOTO">
+                     <photo
+                           format="JPEG"
+                           height="400"
+                           quality="75"
+                           save="false"
+                           source="CAMERA"
+                           width="200"/>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <Button>
+         <id>ButtonSelectPhoto</id>
+         <label class="mainmenu-2">Select photo from library</label>
+         <handlers>
+            <event
+                  desc="ButtonSelectPhoto_OnTap"
+                  name="tap">
+               <handler>
+                  <action
+                        target="photovariable"
+                        type="TAKE_PHOTO">
+                     <photo
+                           format="JPEG"
+                           height="400"
+                           quality="75"
+                           save="false"
+                           source="PHOTOLIBRARY"
+                           width="200"/>
+                  </action>
+               </handler>
+            </event>
+         </handlers>
+      </Button>
+      <VerticalComposite>
+         <id>VerticalComposite1</id>
+         <controls>
+            <Image>
+               <id>Image1</id>
+               <source>data:image/png;base64,${photovariable}</source>
+               <marginCustom value="true">
+                  <marginLeft>2</marginLeft>
+                  <marginRight>2</marginRight>
+               </marginCustom>
+            </Image>
+         </controls>
+         <alignX>Center</alignX>
+         <marginCustom value="true">
+            <marginTop>20</marginTop>
+         </marginCustom>
+      </VerticalComposite>
+   </controls>
+</page>

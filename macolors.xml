@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo exeName="LegaSuite.exe" exeVersion="7.2734.0.0" modelVersion="1.0" ?>
+<colors>
+   <color name="List Background">
+      <rgb red="241" green="246" blue="248"/>
+   </color>
+   <color name="Rocket Gray">
+      <rgb red="188" green="189" blue="192"/>
+   </color>
+   <color name="Error Yellow">
+      <rgb red="255" green="255" blue="196"/>
+   </color>
+   <color name="Rocket Blue">
+      <rgb red="12" green="90" blue="146"/>
+   </color>
+   <color name="Rocket Red">
+      <rgb red="224" green="17" blue="17"/>
+   </color>
+   <color name="Big Box Red">
+      <rgb red="226" green="32" blue="41"/>
+   </color>
+   <color name="Big Box Blue">
+      <rgb red="0" green="127" blue="198"/>
+   </color>
+   <color name="Car-Green">
+      <rgb red="122" green="178" blue="50"/>
+   </color>
+   <color name="Project color 09">
+      <rgb red="66" green="66" blue="66"/>
+   </color>
+   <color name="Project color 10">
+      <rgb red="37" green="37" blue="37"/>
+   </color>
+   <color name="Project color 11">
+      <rgb red="237" green="234" blue="230"/>
+   </color>
+   <color name="Project color 12">
+      <rgb red="0" green="132" blue="193"/>
+   </color>
+   <color name="Project color 13">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 14">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 15">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 16">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 17">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 18">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 19">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 20">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 21">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 22">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 23">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 24">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 25">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 26">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 27">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 28">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 29">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 30">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 31">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 32">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 33">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 34">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 35">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 36">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 37">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 38">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 39">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+   <color name="Project color 40">
+      <rgb red="0" green="0" blue="0"/>
+   </color>
+</colors>
