@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201510141332" modelVersion="1.0" ?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201602010550" modelVersion="1.0" ?>
 <page>
    <id>MAP</id>
    <title>${SelectedOffice.City}</title>
@@ -27,17 +27,6 @@
    <actionbutton value="true">
       <id>actionbutton1</id>
       <icon>Resources/Rocket-Bug_white_31x42.png</icon>
-      <handlers>
-         <event
-               desc="actionbutton1_OnForward"
-               name="forward">
-            <handler>
-               <action
-                     target="Drawer1"
-                     type="WIDGET_SHOW"/>
-            </handler>
-         </event>
-      </handlers>
    </actionbutton>
    <controls>
       <Label>

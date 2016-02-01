@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201509182326" modelVersion="1.0" ?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="1.0.0.201602010550" modelVersion="1.0" ?>
 <page>
    <id>about</id>
    <title>Rocket Mobile</title>
-   <backgroundImage>Resources/background/background_${DimensionsBackground}.png</backgroundImage>
    <backbutton value="true">
       <id>backbutton1</id>
       <handlers>
