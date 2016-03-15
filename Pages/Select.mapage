@@ -54,6 +54,7 @@
                      </handler>
                   </event>
                </handlers>
+               <template>Templates/Widgets/Button.mawidgettemplate</template>
             </Button>
             <Button>
                <id>ButtonMidsize</id>
@@ -74,6 +75,7 @@
                      </handler>
                   </event>
                </handlers>
+               <template>Templates/Widgets/Button.mawidgettemplate</template>
             </Button>
             <Button>
                <id>ButtonEstate</id>
@@ -94,8 +96,10 @@
                      </handler>
                   </event>
                </handlers>
+               <template>Templates/Widgets/Button.mawidgettemplate</template>
             </Button>
          </controls>
+         <template>Templates/Containers/TabBar.mawidgettemplate</template>
       </TabBar>
       <List>
          <id>List1</id>
@@ -124,7 +128,9 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/List.mawidgettemplate</template>
       </List>
    </controls>
    <handlers/>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

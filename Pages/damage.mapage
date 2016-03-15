@@ -24,6 +24,7 @@
                <id>Label1</id>
                <value>Damage details</value>
                <textColor>16</textColor>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
             <FormComposite>
                <id>FormComposite1</id>
@@ -34,10 +35,12 @@
                      <placeholder/>
                      <inputType>number</inputType>
                      <value>${damagereport.Milage}</value>
+                     <template>Templates/Widgets/TextField.mawidgettemplate</template>
                   </TextField>
                   <TextField>
                      <id>TextFieldDriver</id>
                      <formLabel>Driver name</formLabel>
+                     <template>Templates/Widgets/TextField.mawidgettemplate</template>
                   </TextField>
                   <DatePicker>
                      <id>DateTimeDamage</id>
@@ -45,14 +48,17 @@
                      <outputFormat>yyyy-MM-dd HH:mm</outputFormat>
                      <formLabel>Date-Time</formLabel>
                      <hasTime>true</hasTime>
+                     <template>Templates/Widgets/DatePicker.mawidgettemplate</template>
                   </DatePicker>
                   <CheckBox>
                      <id>CheckBoxPoliceReport</id>
                      <formLabel class="">Police report</formLabel>
+                     <template>Templates/Widgets/CheckBox.mawidgettemplate</template>
                   </CheckBox>
                   <CheckBox>
                      <id>CheckBoxVehicleTowed</id>
                      <formLabel>Vehicle towed</formLabel>
+                     <template>Templates/Widgets/CheckBox.mawidgettemplate</template>
                   </CheckBox>
                   <Button>
                      <id>ButtonAddPhoto</id>
@@ -72,11 +78,14 @@
                            </handler>
                         </event>
                      </handlers>
+                     <template>Templates/Widgets/Button.mawidgettemplate</template>
                   </Button>
                </controls>
+               <template>Templates/Containers/FormComposite.mawidgettemplate</template>
             </FormComposite>
          </controls>
          <backgroundColor>24</backgroundColor>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <Button>
          <id>ButtonSubmit</id>
@@ -99,6 +108,8 @@
          <label
                class="mainmenu-2"
                font="RocketFont">Submit Damage Report</label>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
    </controls>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

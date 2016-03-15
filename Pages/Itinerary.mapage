@@ -49,6 +49,7 @@
             <Image>
                <id>Image1</id>
                <source>Resources/Car/${CarSelect.response.output.ResultSet1[${SelectedCar}].FILENAME}</source>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
             <Label>
                <id>Label1</id>
@@ -57,9 +58,11 @@
                   <marginTop>10</marginTop>
                   <marginLeft>10</marginLeft>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
          </controls>
          <paddingDefault>10</paddingDefault>
+         <template>Templates/Containers/HorizontalComposite.mawidgettemplate</template>
       </HorizontalComposite>
       <VerticalComposite>
          <id>VerticalComposite3</id>
@@ -71,6 +74,7 @@
                <marginCustom value="true">
                   <marginLeft>5</marginLeft>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
             <FormComposite>
                <id>FormComposite3</id>
@@ -81,11 +85,14 @@
                      <selectboxItems>
                         <selectboxItem>${Colors}</selectboxItem>
                      </selectboxItems>
+                     <template>Templates/Widgets/Selectbox.mawidgettemplate</template>
                   </Selectbox>
                </controls>
+               <template>Templates/Containers/FormComposite.mawidgettemplate</template>
             </FormComposite>
          </controls>
          <backgroundColor>24</backgroundColor>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <VerticalComposite>
          <id>VerticalComposite1</id>
@@ -97,6 +104,7 @@
                <marginCustom value="true">
                   <marginLeft>5</marginLeft>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
             <FormComposite>
                <id>FormComposite1</id>
@@ -107,20 +115,24 @@
                      <selectboxItems>
                         <selectboxItem>${RocketLocations.response.result_set.City}</selectboxItem>
                      </selectboxItems>
+                     <template>Templates/Widgets/Selectbox.mawidgettemplate</template>
                   </Selectbox>
                   <DatePicker>
                      <id>DatePickup</id>
                      <formLabel>Date</formLabel>
                      <inputFormat>yyyy-MM-dd</inputFormat>
                      <outputFormat>yyyy-MM-dd</outputFormat>
+                     <template>Templates/Widgets/DatePicker.mawidgettemplate</template>
                   </DatePicker>
                </controls>
+               <template>Templates/Containers/FormComposite.mawidgettemplate</template>
             </FormComposite>
          </controls>
          <backgroundColor>24</backgroundColor>
          <marginCustom value="true">
             <marginTop>10</marginTop>
          </marginCustom>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <VerticalComposite>
          <id>VerticalComposite2</id>
@@ -132,6 +144,7 @@
                <marginCustom value="true">
                   <marginLeft>5</marginLeft>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
             <FormComposite>
                <id>FormComposite2</id>
@@ -142,25 +155,30 @@
                      <selectboxItems>
                         <selectboxItem>${RocketLocations.response.result_set.City}</selectboxItem>
                      </selectboxItems>
+                     <template>Templates/Widgets/Selectbox.mawidgettemplate</template>
                   </Selectbox>
                   <DatePicker>
                      <id>DateDropoff</id>
                      <formLabel>Date</formLabel>
                      <inputFormat>yyyy-MM-dd</inputFormat>
                      <outputFormat>yyyy-MM-dd</outputFormat>
+                     <template>Templates/Widgets/DatePicker.mawidgettemplate</template>
                   </DatePicker>
                </controls>
+               <template>Templates/Containers/FormComposite.mawidgettemplate</template>
             </FormComposite>
          </controls>
          <backgroundColor>24</backgroundColor>
          <marginCustom value="true">
             <marginTop>10</marginTop>
          </marginCustom>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <Label>
          <id>Message_Label</id>
          <title/>
          <value>Retrieving data...</value>
+         <template>Templates/Widgets/Label.mawidgettemplate</template>
       </Label>
       <Button>
          <id>ButtonBookNow</id>
@@ -183,6 +201,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
    </controls>
    <handlers>
@@ -230,4 +249,5 @@
          </handler>
       </event>
    </handlers>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>
