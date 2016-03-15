@@ -23,6 +23,7 @@
             <Image>
                <id>Image1</id>
                <source>Resources\about_icon_v2.png</source>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
             <Label>
                <id>Label4</id>
@@ -31,6 +32,7 @@
                   <marginLeft>0</marginLeft>
                   <marginTop>10</marginTop>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
          </controls>
          <alignY>Middle</alignY>
@@ -38,6 +40,7 @@
             <marginTop>10</marginTop>
          </marginCustom>
          <paddingCustom value="true"/>
+         <template>Templates/Containers/HorizontalComposite.mawidgettemplate</template>
       </HorizontalComposite>
       <VerticalComposite>
          <id>VerticalComposite4</id>
@@ -49,6 +52,7 @@
                      <id>Label5</id>
                      <value>Settings</value>
                      <textColor>16</textColor>
+                     <template>Templates/Widgets/Label.mawidgettemplate</template>
                   </Label>
                   <FormComposite>
                      <id>FormComposite4</id>
@@ -94,8 +98,10 @@
                                  </handler>
                               </event>
                            </handlers>
+                           <template>Templates/Widgets/Toggle.mawidgettemplate</template>
                         </Toggle>
                      </controls>
+                     <template>Templates/Containers/FormComposite.mawidgettemplate</template>
                   </FormComposite>
                </controls>
                <backgroundColor>24</backgroundColor>
@@ -103,6 +109,7 @@
                   <marginTop>20</marginTop>
                   <marginBottom>20</marginBottom>
                </marginCustom>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
             <VerticalComposite>
                <id>VerticalComposite2</id>
@@ -111,6 +118,7 @@
                      <id>Label1</id>
                      <value>About this App</value>
                      <textColor>16</textColor>
+                     <template>Templates/Widgets/Label.mawidgettemplate</template>
                   </Label>
                   <FormComposite>
                      <id>FormComposite2</id>
@@ -121,8 +129,10 @@
                            <value>${App.ApplicationVersion}</value>
                            <formLabel>App version</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                      </controls>
+                     <template>Templates/Containers/FormComposite.mawidgettemplate</template>
                   </FormComposite>
                </controls>
                <backgroundColor>24</backgroundColor>
@@ -130,6 +140,7 @@
                   <marginTop>20</marginTop>
                   <marginBottom>20</marginBottom>
                </marginCustom>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
             <VerticalComposite>
                <id>VerticalComposite1</id>
@@ -138,6 +149,7 @@
                      <id>Label2</id>
                      <value>About the Rocket Access &amp; Connectivity Hub</value>
                      <textColor>16</textColor>
+                     <template>Templates/Widgets/Label.mawidgettemplate</template>
                   </Label>
                   <FormComposite>
                      <id>FormComposite1</id>
@@ -147,6 +159,7 @@
                            <id>TextField6</id>
                            <formLabel>URL</formLabel>
                            <value>${App.SessionInfo.baseUrl}</value>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField1</id>
@@ -154,6 +167,7 @@
                            <value>${centipede_version.response.serverVersion.version}</value>
                            <formLabel>Version</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField2</id>
@@ -161,6 +175,7 @@
                            <value>${centipede_version.response.serverVersion.timestamp}</value>
                            <formLabel>Timestamp</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField3</id>
@@ -168,6 +183,7 @@
                            <value>${centipede_version.response.serverVersion.revision}</value>
                            <formLabel>Revision</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField4</id>
@@ -175,17 +191,20 @@
                            <value>${centipede_version.response.serverVersion.buildNumber}</value>
                            <formLabel>Build</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                      </controls>
                      <marginCustom value="true">
                         <marginTop>10</marginTop>
                      </marginCustom>
+                     <template>Templates/Containers/FormComposite.mawidgettemplate</template>
                   </FormComposite>
                </controls>
                <backgroundColor>24</backgroundColor>
                <marginCustom value="true">
                   <marginBottom>20</marginBottom>
                </marginCustom>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
             <VerticalComposite>
                <id>VerticalComposite3</id>
@@ -194,6 +213,7 @@
                      <id>Label3</id>
                      <value>About this device</value>
                      <textColor>16</textColor>
+                     <template>Templates/Widgets/Label.mawidgettemplate</template>
                   </Label>
                   <FormComposite>
                      <id>FormComposite3</id>
@@ -204,6 +224,7 @@
                            <value>${App.DeviceInfo.width}</value>
                            <formLabel>Width</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField8</id>
@@ -211,6 +232,7 @@
                            <value>${App.DeviceInfo.height}</value>
                            <formLabel>Height</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField9</id>
@@ -218,6 +240,7 @@
                            <value>${App.DeviceInfo.pixelRatio}</value>
                            <formLabel>Pixel Ratio</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                         <TextField>
                            <id>TextField10</id>
@@ -225,16 +248,20 @@
                            <value>${App.DeviceInfo.orientation}</value>
                            <formLabel>Orientation</formLabel>
                            <readOnly>true</readOnly>
+                           <template>Templates/Widgets/TextField.mawidgettemplate</template>
                         </TextField>
                      </controls>
+                     <template>Templates/Containers/FormComposite.mawidgettemplate</template>
                   </FormComposite>
                </controls>
                <backgroundColor>24</backgroundColor>
                <marginCustom value="true">
                   <marginBottom>20</marginBottom>
                </marginCustom>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
          </controls>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <Button>
          <id>LogoutButton</id>
@@ -252,6 +279,7 @@
             <marginTop>5</marginTop>
          </marginCustom>
          <visible>false</visible>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
    </controls>
    <handlers>
@@ -279,4 +307,5 @@
          </handler>
       </event>
    </handlers>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

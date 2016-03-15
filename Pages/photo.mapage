@@ -39,6 +39,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <Button>
          <id>ButtonSelectPhoto</id>
@@ -62,6 +63,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <VerticalComposite>
          <id>VerticalComposite1</id>
@@ -73,12 +75,15 @@
                   <marginLeft>2</marginLeft>
                   <marginRight>2</marginRight>
                </marginCustom>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
          </controls>
          <alignX>Center</alignX>
          <marginCustom value="true">
             <marginTop>20</marginTop>
          </marginCustom>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
    </controls>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

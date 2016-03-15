@@ -28,9 +28,11 @@
             <Image>
                <id>Image1</id>
                <source>Resources\Car\banner.png</source>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
          </controls>
          <alignX>Center</alignX>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <Button>
          <id>ButtonBookaCar</id>
@@ -54,6 +56,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <Button>
          <id>ButtonLocate</id>
@@ -71,6 +74,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <Button>
          <id>ButtonDamage</id>
@@ -88,6 +92,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <Button>
          <id>ButtonStats</id>
@@ -105,6 +110,7 @@
                </handler>
             </event>
          </handlers>
+         <template>Templates/Widgets/Button.mawidgettemplate</template>
       </Button>
       <HorizontalComposite>
          <id>HorizontalComposite1</id>
@@ -112,6 +118,7 @@
             <Image>
                <id>Image3</id>
                <source>Resources\about_icon_v2.png</source>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
             <Label>
                <id>Label1</id>
@@ -120,6 +127,7 @@
                   <marginLeft>0</marginLeft>
                   <marginTop>10</marginTop>
                </marginCustom>
+               <template>Templates/Widgets/Label.mawidgettemplate</template>
             </Label>
          </controls>
          <alignY>Middle</alignY>
@@ -127,7 +135,9 @@
             <marginTop>50</marginTop>
          </marginCustom>
          <paddingCustom value="true"/>
+         <template>Templates/Containers/HorizontalComposite.mawidgettemplate</template>
       </HorizontalComposite>
    </controls>
    <handlers/>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

@@ -36,14 +36,17 @@
             <Image>
                <id>Image1</id>
                <source>Resources\Car\banner.png</source>
+               <template>Templates/Widgets/Image.mawidgettemplate</template>
             </Image>
          </controls>
          <alignX>Center</alignX>
+         <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
       </VerticalComposite>
       <Label>
          <id>Message_Label</id>
          <title/>
          <value>Retrieving data...</value>
+         <template>Templates/Widgets/Label.mawidgettemplate</template>
       </Label>
       <List>
          <id>List1</id>
@@ -82,6 +85,7 @@
          <marginCustom value="true">
             <marginTop>10</marginTop>
          </marginCustom>
+         <template>Templates/Widgets/List.mawidgettemplate</template>
       </List>
    </controls>
    <handlers>
@@ -164,4 +168,5 @@
          </handler>
       </event>
    </handlers>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>

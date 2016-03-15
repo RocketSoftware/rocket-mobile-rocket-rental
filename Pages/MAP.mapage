@@ -37,6 +37,7 @@
             <marginBottom>8</marginBottom>
          </marginCustom>
          <wrap>true</wrap>
+         <template>Templates/Widgets/Label.mawidgettemplate</template>
       </Label>
       <Map>
          <id>OfficeLoaction_Map</id>
@@ -48,7 +49,9 @@
                   lat="${SelectedOffice.Lat}"
                   lon="${SelectedOffice.Lon}"/>
          </points>
+         <template>Templates/Widgets/Map.mawidgettemplate</template>
       </Map>
    </controls>
    <handlers/>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>
