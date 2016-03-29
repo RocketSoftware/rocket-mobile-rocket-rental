@@ -29,6 +29,7 @@
                         <Label>
                            <id>Label1</id>
                            <value font="RocketFont">Car popularity</value>
+                           <template>Templates/Widgets/Label.mawidgettemplate</template>
                         </Label>
                      </controls>
                      <alignX>Center</alignX>
@@ -36,6 +37,7 @@
                         <marginBottom>30</marginBottom>
                         <marginTop>30</marginTop>
                      </marginCustom>
+                     <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
                   </VerticalComposite>
                   <DoughnutChart>
                      <id>DoughnutChart1</id>
@@ -43,8 +45,10 @@
                      <percentageInnerCutout>40</percentageInnerCutout>
                      <width>99</width>
                      <data>${PieChartData}</data>
+                     <template>Templates/Widgets/DoughnutChart.mawidgettemplate</template>
                   </DoughnutChart>
                </controls>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
             <VerticalComposite>
                <id>CPage2</id>
@@ -55,6 +59,7 @@
                         <Label>
                            <id>Label2</id>
                            <value>Milage</value>
+                           <template>Templates/Widgets/Label.mawidgettemplate</template>
                         </Label>
                      </controls>
                      <alignX>Center</alignX>
@@ -62,18 +67,23 @@
                         <marginTop>30</marginTop>
                         <marginBottom>30</marginBottom>
                      </marginCustom>
+                     <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
                   </VerticalComposite>
                   <BarChart>
                      <id>BarChart1</id>
                      <data>${BarChartData}</data>
                      <height>51</height>
                      <width>99</width>
+                     <template>Templates/Widgets/BarChart.mawidgettemplate</template>
                   </BarChart>
                </controls>
+               <template>Templates/Containers/VerticalComposite.mawidgettemplate</template>
             </VerticalComposite>
          </controls>
          <flex>1</flex>
          <handlers/>
+         <template>Templates/Containers/Carousel.mawidgettemplate</template>
       </Carousel>
    </controls>
+   <template>Templates/Pages/Default.mapagetemplate</template>
 </page>
